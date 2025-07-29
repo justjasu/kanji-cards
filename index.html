@@ -1,0 +1,44 @@
+<script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^0.7.0"
+    }
+  }
+  </script>
+  <!-- Add Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Roboto:wght@400;500&family=Noto+Sans+JP:wght@500;700&family=Yuji+Syuku&display=swap" rel="stylesheet">
+
+  <div class="container">
+    <h1>JLPT Kanji Master</h1>
+    <p>
+      Select a JLPT level to begin. Study 5 new cards each day and unlock review modes as you progress.
+    </p>
+    
+    <div id="levelSelector" class="level-selector">
+      <button class="level-button" data-level="N5">N5</button>
+      <button class="level-button" data-level="N4">N4</button>
+      <button class="level-button" data-level="N3">N3</button>
+      <button class="level-button" data-level="N2">N2</button>
+      <button class="level-button" data-level="N1">N1</button>
+    </div>
+
+    <div id="studyControls">
+      <div id="progressTracker" class="progress-tracker"></div>
+      <div id="sessionOptions" class="session-options">
+          <button id="studyDailyButton" class="session-button" disabled>Study 5 New</button>
+          <button id="study25Button" class="session-button" disabled>Review First 25</button>
+          <button id="study50Button" class="session-button" disabled>Review First 50</button>
+          <button id="studyAllButton" class="session-button" disabled>Review Full Set</button>
+          <button id="studyEndlessButton" class="session-button endless-button" disabled>Endless Play</button>
+      </div>
+      <button id="resetButton" class="secondary-button" style="display: none;">Reset Progress</button>
+    </div>
+
+    <div id="statusMessage" class="status-message"></div>
+    <div id="flashcardsContainer" class="flashcards-container">
+      <!-- Kanji flashcards will be generated here -->
+    </div>
+  </div><link rel="stylesheet" href="/index.css">
+<script type="module" src="/index.tsx"></script>
